@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.balloon</groupId>
         <artifactId>balloon-springboot</artifactId>
-        <version>0.0.1</version>
+        <version>0.1.0</version>
     </parent>
 
     <version>1.0.0</version>
@@ -19,7 +19,7 @@
         <dependency>
             <groupId>com.balloon</groupId>
             <artifactId>balloon-springboot-starter</artifactId>
-            <version>0.0.1</version>
+            <version>0.1.0</version>
         </dependency>
 
         <dependency>
