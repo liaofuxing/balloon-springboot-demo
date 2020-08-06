@@ -1,0 +1,51 @@
+server:
+  port: 8092
+  servlet:
+    context-path: /balloon-springboot-demo
+  shutdown: graceful # 优雅关机
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 30s # 设置缓冲期, 最大等待时间
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/balloon_springboot?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456
+    hikari:
+      pool-name: wb_HikariCP
+      minimum-idle: 5 #最小空闲连接数量
+      idle-timeout: 180000 #空闲连接存活最大时间，默认600000（10分钟）
+      maximum-pool-size: 10 #连接池最大连接数，默认是10
+      auto-commit: true  #此属性控制从池返回的连接的默认自动提交行为,默认值：true
+      max-lifetime: 1800000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      connection-timeout: 30000 #数据库连接超时时间,默认30秒，即30000
+      connection-test-query: SELECT 1
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    hibernate:
+#      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 5000
+
+
+# balloon spring boot 扩张配置
+balloon:
+  springboot:
+    enabled: true
+  redis:
+    enabled: true
+  security:
+    # 是否启用 security 配置, 默认是false
+    enabled: true
+    # 是否允许跨域, 默认是false, true是启用
+    cors: true
+
+
+
+
