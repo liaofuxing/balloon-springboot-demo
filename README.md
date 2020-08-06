@@ -5,13 +5,16 @@ balloon-springboot-demo 是 balloon 系列项目，balloon-core 和 balloon-spri
 
 
 #### 依赖
-balloon-core 1.0.0
-balloon-springboot 0.1.0
-jdk 1.8+
-maven 3.3+
+- balloon-core 1.0.0
+- balloon-springboot 0.1.0
+- jdk 1.8+
+- maven 3.3+
+
+
+
+
 
 #### 功能
-
 1. 用户管理
 2. 部门管理
 3. 角色管理
