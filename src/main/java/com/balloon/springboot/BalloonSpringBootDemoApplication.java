@@ -7,10 +7,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @EnableTransactionManagement
 @SpringBootApplication(exclude = {UserDetailsServiceAutoConfiguration.class })
-public class BalloonSpringBootWebApplication {
+public class BalloonSpringBootDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BalloonSpringBootWebApplication.class, args);
+        SpringApplication.run(BalloonSpringBootDemoApplication.class, args);
     }
 
 }
