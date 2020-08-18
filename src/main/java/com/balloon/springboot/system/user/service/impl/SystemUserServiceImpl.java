@@ -21,6 +21,7 @@ import com.balloon.springboot.system.user.vo.SystemUserVO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -69,7 +70,7 @@ public class SystemUserServiceImpl implements SystemUserService {
     /**
      * 根据id查询SystemUser
      */
-    //@Cacheable(value = "spring-cloud-system", key = "'user_'+#systemUserId")
+    @Cacheable(value = "balloon-springboot-demo", key = "'user_'+#systemUserId")
     @Override
     public SystemUser findSystemUserById(Integer systemUserId) {
         return systemUserDao.findById(systemUserId).orElse(null);

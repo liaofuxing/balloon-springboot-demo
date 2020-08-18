@@ -40,6 +40,8 @@ balloon:
     enabled: true
   redis:
     enabled: true
+    # 是否启用 redis 缓存, true是启用, 默认是false
+    cache: true
   security:
     # 是否启用 security 配置, 默认是false
     enabled: true
