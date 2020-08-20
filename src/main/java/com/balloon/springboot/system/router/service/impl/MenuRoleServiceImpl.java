@@ -1,7 +1,7 @@
 package com.balloon.springboot.system.router.service.impl;
 
 import com.balloon.core.exception.BusinessRuntimeException;
-import com.balloon.springboot.common.SysExceptionEnums;
+import com.balloon.springboot.enums.exception.SysExceptionEnums;
 import com.balloon.springboot.system.router.dao.MenuRoleDao;
 import com.balloon.springboot.system.router.dao.RouterDao;
 import com.balloon.springboot.system.router.entity.MenuRole;

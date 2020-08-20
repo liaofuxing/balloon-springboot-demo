@@ -1,4 +1,4 @@
-package com.balloon.springboot.common;
+package com.balloon.springboot.enums.exception;
 
 import com.balloon.core.exception.IBaseExceptionEnums;
 
