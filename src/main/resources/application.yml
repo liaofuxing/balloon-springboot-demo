@@ -23,8 +23,8 @@ spring:
       connection-test-query: SELECT 1
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-#    hibernate:
-#      ddl-auto: update
+    hibernate:
+      ddl-auto: update
     show-sql: true
     open-in-view: false
   redis:
@@ -32,6 +32,34 @@ spring:
     port: 6379
     password:
     timeout: 5000
+  quartz:
+    properties:
+      org:
+        quartz:
+          scheduler:
+            # 调度器实例名称
+            instanceName: clusteredScheduler
+            # 调度器实例编号自动生成
+            instanceId: AUTO
+          jobStore:
+            # 持久化
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+            # 开启分布式部署
+            isClustered: true
+            clusterCheckinInterval: 10000
+            useProperties: false
+          threadPool:
+            # 实例化ThreadPool时，使用的线程类为SimpleThreadPool
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+    job-store-type: jdbc
+    # quartz 会在第一次启动是自动初始化数据库, 即使用 quartz 标准的数据库脚本创建数据库表
+    jdbc:
+      initialize-schema: always
 
 
 # balloon spring boot 扩张配置
