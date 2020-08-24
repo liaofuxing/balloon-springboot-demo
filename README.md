@@ -35,7 +35,7 @@
     
     2.将 balloon-core， balloon-springboot 通过 maven 命令 install 到本地 maven 仓库
     
-    3.以上操作完成后即可在目录下允许 mavne 的打包命令
+    3.以上操作完成后即可在目录下运行 mavne 的打包命令
 
 
 

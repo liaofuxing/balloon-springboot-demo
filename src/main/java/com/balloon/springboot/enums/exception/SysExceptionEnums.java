@@ -19,11 +19,11 @@ public enum SysExceptionEnums implements IBaseExceptionEnums {
     }
 
     public Integer getCode() {
-        return null;
+        return this.code;
     }
 
     public String getMsg() {
-        return null;
+        return this.msg;
     }
 
 
