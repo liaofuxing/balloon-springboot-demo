@@ -13,7 +13,7 @@ spring:
     username: root
     password: 123456
     hikari:
-      pool-name: wb_HikariCP
+      pool-name: balloon_springboot_HikariCP
       minimum-idle: 5 #最小空闲连接数量
       idle-timeout: 180000 #空闲连接存活最大时间，默认600000（10分钟）
       maximum-pool-size: 10 #连接池最大连接数，默认是10
@@ -75,6 +75,8 @@ balloon:
     enabled: true
     # 是否允许跨域, 默认是false, true是启用
     cors: true
+    # 设置 security 不需要拦截的 url
+    filterUrl: /user/sendSmsCode, /user/register
 
 
 
